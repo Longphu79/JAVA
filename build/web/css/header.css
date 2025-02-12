@@ -1,0 +1,495 @@
+body {
+    background-color: #FDF5ED;
+}
+
+a:hover {
+    color: var(--color-red);
+}
+
+#pt123__logo {
+    width: 170px;
+    height: 45px;
+    margin-left: 0;
+}
+
+.pt123__nav {
+    height: 40px;
+}
+
+.page__header {
+    margin: 1.3rem 0;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.page__h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.breadcrumb {
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+}
+
+.banner_fixed {
+    width: 120px;
+    overflow: hidden;
+    position: fixed;
+    top: 120px;
+    z-index: 9;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+}
+
+.fix-body .banner_fixed {
+    position: fixed;
+    top: 100px;
+}
+
+body.loaded .banner_fixed {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.hidden__ads .banner_fixed {
+    display: none !important;
+}
+
+.filter__bar {
+    width: 350px;
+}
+
+body.transition-menu .filter__bar {
+    margin: initial !important;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem 0;
+}
+
+body.transition-menu .filter__suggest {
+    display: block !important;
+}
+
+#filter__top {
+    width: 100%;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+#filter__top .filter__body {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#filter__top .filter__item {
+    padding: 0;
+    margin: 0 0.5rem 0 0;
+    border: 0;
+    position: relative;
+    font-size: 1rem;
+}
+
+#filter__top .filter__item.active {
+    font-weight: normal;
+}
+
+#filter__top .filter__item span {
+    padding: 0.5rem 1.4rem 0.5rem 0.5rem;
+}
+
+#filter__top .filter__item span.delete-item {
+    display: none;
+}
+
+#filter__top .filter__item::after {
+    position: absolute;
+    right: 0.4rem;
+    pointer-events: none;
+}
+
+.top__city img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+#homeTab .nav-link {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) !important;
+}
+
+#homeTab .nav-link.active {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
+}
+
+.post__thumb {
+    width: 180px;
+    height: 170px;
+}
+
+.post__thumb.small {
+    width: 160px;
+    height: 160px;
+}
+
+.post__thumb__vipnoibat {
+    width: 100%;
+    height: 260px;
+}
+
+.post__thumb__vipnoibat .img__1 {
+    width: 60%;
+    height: 260px;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.post__thumb__vipnoibat .img__2 {
+    width: 40%;
+    height: 50%;
+    border-top-right-radius: 0.4rem;
+    border-top: 0;
+    border-right: 0;
+}
+
+.post__thumb__vipnoibat .img__3 {
+    width: 20%;
+    height: 50%;
+    border-radius: 0;
+}
+
+.post__thumb__vipnoibat .img__4 {
+    width: 20%;
+    height: 50%;
+    border-bottom-right-radius: 0.4rem;
+    border-right: 0;
+}
+
+.post__thumb__vip1 {
+    width: 270px;
+    flex-shrink: 0;
+}
+
+.post__thumb__vip2,
+.post__thumb__vip3 {
+    width: 220px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.post__thumb.grid {
+    width: 100%;
+    height: 160px;
+}
+
+.post__media {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.post__media .img__1 {
+    width: 50%;
+    height: 100%;
+    border-right: 3px solid #fff;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+
+.post__media .img__2 {
+    width: 25%;
+    height: 50%;
+    border-right: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.post__media .img__3 {
+    width: 25%;
+    height: 50%;
+    border-bottom: 3px solid #fff;
+    border-top-right-radius: 0.4rem;
+}
+
+.post__media .img__4 {
+    width: 25%;
+    height: 50%;
+    border-right: 3px solid #fff;
+}
+
+.post__media .img__5 {
+    width: 25%;
+    height: 50%;
+    border-bottom-right-radius: 0.4rem;
+}
+
+.post__media .has__video {
+    width: 50%;
+    height: 100%;
+}
+
+.post__photos {
+    height: auto;
+}
+
+.post__photos .carousel-inner {
+    height: 360px;
+}
+
+.carousel.photos .carousel-indicators [data-bs-target] {
+    width: auto !important;
+    height: auto !important;
+    pointer-events: initial !important;
+    text-indent: initial !important;
+    opacity: 0.8;
+    border: 2px solid #fff;
+    margin: 1px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: block;
+}
+
+.carousel.photos .carousel-indicators .active {
+    border-color: var(--color-red) !important;
+    opacity: 1;
+}
+
+.carousel.photos .carousel-control-next,
+.carousel.photos .carousel-control-prev {
+    margin-top: -84px;
+}
+
+.post__photos .carousel.photos .carousel-control-next,
+.post__photos .carousel.photos .carousel-control-prev {
+    width: 60px;
+    height: 200px;
+    top: 0;
+    margin-top: 70px;
+    opacity: 1;
+}
+
+.btn__save__lg {
+    background-color: #fff;
+}
+
+.chothuenhanh-label {
+    width: 70px;
+    height: 70px;
+    top: -6px;
+    left: -6px;
+}
+
+.chothuenhanh-label.medium {
+    width: 80px;
+    height: 80px;
+    top: -7px;
+    left: -7px;
+}
+
+.chothuenhanh-label.large {
+    width: 90px;
+    height: 90px;
+    top: -8px;
+    left: -8px;
+}
+
+#carousel__Posts .carousel-control {
+    position: absolute;
+    top: -40px;
+    right: 0;
+}
+
+/* #carousel__Posts .carousel-control-prev {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    top: -30px;
+}
+#carousel__Posts .carousel-control-next {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    top: -30px;
+} */
+#offcanvasLocation,
+#offcanvasDistrict,
+#offcanvasWard,
+#offcanvasAdvance,
+#offcanvasArea,
+#offcanvasPrice {
+    /* max-height: 500px; */
+    /* top: 100px; */
+    /* bottom: 100px; */
+    border-radius: var(--bs-border-radius-xl);
+    overflow: hidden;
+}
+
+#offcanvasLocation,
+#offcanvasDistrict,
+#offcanvasWard {
+    width: 600px;
+    height: 600px;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    margin-top: -300px !important;
+    margin-left: -300px !important;
+}
+
+#offcanvasAdvance {
+    width: 600px;
+    height: 600px;
+    max-height: 100%;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px !important;
+    margin-left: -300px !important;
+}
+
+body.page_quen_mat_khau .pt123__nav,
+body.login .pt123__nav,
+body.register .pt123__nav {
+    display: block;
+}
+
+#my-video .vjs-big-play-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+
+#support_Button,
+#scroll_Top {
+    right: 40px;
+}
+
+.form-floating>.form-control {
+    padding: 1rem;
+}
+
+.form-floating>label {
+    padding: 1rem;
+}
+
+.article-thumbnail-lg {
+    width: 100%;
+    height: 220px;
+}
+
+#page__main {
+    max-width: 100%;
+}
+
+.box__text img {
+    max-width: 600px;
+}
+
+.btn-red {
+    background-color: red;
+}
+
+#header {
+    padding-top: 10px;
+}
+
+#cha li a {
+    text-decoration: none;
+}
+
+#cha {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+
+}
+
+#cha li {
+    list-style: none;
+}
+
+@media (min-width: 992px) {
+
+    html {
+        font-size: 13px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 980px;
+    }
+
+    html {
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .container,
+    .container-md,
+    .container-sm {
+        max-width: 1020px;
+    }
+
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    .post__thumb__vip1 {
+        width: 250px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .post__thumb__vip1 {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .article-thumbnail-lg {
+        height: 250px;
+    }
+
+    .post__thumb__vip2,
+    .post__thumb__vip3 {
+        width: 200px;
+        height: 180px;
+        flex-shrink: 0;
+    }
+
+    .post__thumb {
+        width: 170px;
+        height: 160px;
+    }
+
+}

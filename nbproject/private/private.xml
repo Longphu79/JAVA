@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Netbean/ProjectSWP391/web/Loggin.jsp</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/dao/RoomDAO.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/UpdateProfile.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/web/Index.jsp</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/RoomServlet.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/Login.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/dao/CustomerDao.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/web/Profile.jsp</file>
+            <file>file:/C:/Netbean/ProjectSWP391/web/WishList_v.jsp</file>
+            <file>file:/C:/Netbean/ProjectSWP391/web/css/header.css</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/WishList.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/Profile.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/model/Wishlist.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/dao/WishListDAO.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/web/change_password.jsp</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/model/Customer.java</file>
+        </group>
+    </open-files>
+</project-private>
