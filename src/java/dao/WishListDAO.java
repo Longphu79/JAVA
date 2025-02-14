@@ -14,7 +14,7 @@ import model.Wishlist;
 public class WishListDAO {
 
     // Lấy danh sách wishlist của khách hàng
-    public List<Wishlist> getWishlist(String email) {
+    public List<Wishlist> getWishlist(int customerId) {
         List<Wishlist> wishlist = new ArrayList<>();
         String sql = "SELECT w.room_id, w.customer_id, " +
                      "r.room_name, r.description, r.price, r.status, r.image, " +
@@ -28,7 +28,7 @@ public class WishListDAO {
         try (Connection con = Database.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
 
-            ps.setString(1, email);
+            ps.setInt(1, customerId);
             try (ResultSet rs = ps.executeQuery()) {
                 while (rs.next()) {
                     Wishlist item = new Wishlist();
@@ -69,18 +69,49 @@ public class WishListDAO {
     }
 
     // Thêm phòng vào wishlist
-    public boolean addToWishlist(int customerId, int roomId) {
-        String sql = "INSERT INTO Wishlist (customer_id, room_id) VALUES (?, ?)";
-
+    public void addToWishlist(int customerId, int roomId) {
+        String sql = "INSERT INTO wishlist_room (user_id, room_id) VALUES (?, ?)";
+        
         try (Connection con = Database.getConnection();
              PreparedStatement ps = con.prepareStatement(sql)) {
-
+            
             ps.setInt(1, customerId);
             ps.setInt(2, roomId);
-            return ps.executeUpdate() > 0; // Trả về true nếu thêm thành công
+            ps.executeUpdate(); // Trả về true nếu thêm thành công
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return false;
+    }
+    
+    public int getUserIdByEmail(String email){
+    String sql ="SELECT user_id FROM Users where email=?";
+    
+    try(Connection con = Database.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql)){
+        ps.setString(1, email);
+        ResultSet result = ps.executeQuery();
+            while (result.next()) {
+                        return result.getInt(1);
+            }
+    }catch (Exception e) {
+            e.printStackTrace();
+        }
+    return -1;
+    }
+    
+    public int getRoomIdByUserId(int userId){
+    String sql ="SELECT room_id FROM wishlist_room where user_id=?";
+    
+    try(Connection con = Database.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql)){
+        ps.setInt(1, userId);
+        ResultSet result = ps.executeQuery();
+            while (result.next()) {
+                        return result.getInt(1);
+            }
+    }catch (Exception e) {
+            e.printStackTrace();
+        }
+    return -1;
     }
 }

@@ -2,12 +2,12 @@ package model;
 
 public class Customer {
 
-    public String email;
-    public String password;
-    public String phone;
-    public String fullName;
-    public String birthDate;
-    public String image;
+    private String email;
+    private String password;
+    private String phone;
+    private String fullName;
+    private String birthDate;
+    private String image;
 
     public Customer() {
     }

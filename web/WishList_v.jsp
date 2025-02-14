@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <%@ page import="java.util.List" %>
 <%@ page import="model.Wishlist" %>
 <%@ page import="model.Room" %>
@@ -37,6 +37,7 @@
     </style>
 </head>
 <body>
+    <%@ include file="./Header.jsp" %>
     <div class="container">
         <h1 class="mt-4 mb-4">My Wishlist</h1>
 

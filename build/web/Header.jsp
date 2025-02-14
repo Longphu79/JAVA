@@ -149,6 +149,16 @@
                                             </div>
                                         </a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item d-flex justify-content-between pt-1 pb-1 pe-5" rel="nofollow" href="WishList_v.jsp">
+                                            <div class="d-flex">
+                                                <span class="d-flex size-30 bg-light rounded-circle justify-content-center me-2">
+                                                    <i class="icon user size-16"></i>
+                                                </span>
+                                                Wish List
+                                            </div>
+                                        </a>
+                                    </li>
                                     <% } %>
                                 </ul>
                             </div>

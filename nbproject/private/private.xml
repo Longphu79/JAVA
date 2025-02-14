@@ -6,6 +6,7 @@
             <file>file:/C:/Netbean/ProjectSWP391/web/Loggin.jsp</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/dao/RoomDAO.java</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/UpdateProfile.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/authenticate.java</file>
             <file>file:/C:/Netbean/ProjectSWP391/web/Index.jsp</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/RoomServlet.java</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/Login.java</file>
@@ -16,8 +17,13 @@
             <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/WishList.java</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/Profile.java</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/model/Wishlist.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/model/Position.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/UploadServlet.java</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/dao/WishListDAO.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/model/Room.java</file>
+            <file>file:/C:/Netbean/ProjectSWP391/web/Header.jsp</file>
             <file>file:/C:/Netbean/ProjectSWP391/web/change_password.jsp</file>
+            <file>file:/C:/Netbean/ProjectSWP391/src/java/controller/Register.java</file>
             <file>file:/C:/Netbean/ProjectSWP391/src/java/model/Customer.java</file>
         </group>
     </open-files>

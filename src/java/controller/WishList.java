@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dao.CustomerDao;
+
 import dao.WishListDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -64,24 +64,6 @@ public class WishList extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        String email = (String) session.getAttribute("email");
-        CustomerDao dao = new CustomerDao();
-        Customer c = dao.SelectCustomerByEmail(email);
-         WishListDAO wishlistDao = new WishListDAO();
-        List<Wishlist> wishlist = wishlistDao.getWishlist(email); // Fetch rooms from database
-
-        if (wishlist != null && !wishlist.isEmpty()) {
-            // Setting the rooms attribute in the request
-            request.setAttribute("wishlist", wishlist);
-        } else {
-            // Handling the case where there are no rooms
-            request.setAttribute("wishlist", null);
-        }
-
-        // Forwarding request to the JSP page
-        RequestDispatcher dispatcher = request.getRequestDispatcher("WishList.jsp");
-        dispatcher.forward(request, response);
     }
 
     /**
@@ -97,22 +79,27 @@ public class WishList extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         String email = (String) session.getAttribute("email");
-        CustomerDao dao = new CustomerDao();
-        int customerId = Integer.parseInt(request.getParameter("customerId"));
-        int roomId = Integer.parseInt(request.getParameter("roomId"));
-
+       
         // Thêm vào wishlist
         WishListDAO wishlistDao = new WishListDAO();
-        boolean isAdded = wishlistDao.addToWishlist(customerId, roomId);
+        int customerId = wishlistDao.getUserIdByEmail(email);
+        int roomId = Integer.parseInt(request.getParameter("roomId"));
+        wishlistDao.addToWishlist(customerId, roomId);
+            List<Wishlist> wishlist = wishlistDao.getWishlist(customerId); // Fetch rooms from database
 
-        if (isAdded) {
-            response.sendRedirect("WishList.jsp"); // Chuyển hướng đến danh sách wishlist
+        if (wishlist != null && !wishlist.isEmpty()) {
+            // Setting the rooms attribute in the request
+            request.setAttribute("wishlist", wishlist);
         } else {
-            request.setAttribute("errorMessage", "Không thể thêm vào Wishlist.");
-            request.getRequestDispatcher("WishList.jsp").forward(request, response);
+            // Handling the case where there are no rooms
+            request.setAttribute("wishlist", null);
         }
-    }
- 
+
+        // Forwarding request to the JSP page
+        request.getRequestDispatcher("WishList_v.jsp").forward(request, response);
+        }
+    
+
 
     /**
      * Returns a short description of the servlet.
@@ -125,3 +112,4 @@ public class WishList extends HttpServlet {
     }// </editor-fold>
 
 }
+    
