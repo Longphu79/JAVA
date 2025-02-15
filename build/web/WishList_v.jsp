@@ -37,7 +37,7 @@
     </style>
 </head>
 <body>
-    <%@ include file="./Header.jsp" %>
+     <%@ include file="./Header.jsp" %>
     <div class="container">
         <h1 class="mt-4 mb-4">My Wishlist</h1>
 
@@ -58,6 +58,7 @@
                         <th>Position</th>
                         <th>Customer Name</th>
                         <th>Customer Email</th>
+                        <th>Action</th> <%-- Thêm cột mới cho nút Delete --%>
                     </tr>
                 </thead>
                 <tbody>
@@ -81,6 +82,14 @@
                             <td><%= position.getPositionName() %></td>
                             <td><%= customer.getFullName() %></td>
                             <td><%= customer.getEmail() %></td>
+                            <td>
+                                <form action="WishList" method="post">
+                                    <input type="hidden" name="roomId" value="<%= room.getRoomId() %>">
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this item from your wishlist?')">
+                                        Delete
+                                    </button>
+                                </form>
+                            </td>
                         </tr>
                     <% } %>
                 </tbody>

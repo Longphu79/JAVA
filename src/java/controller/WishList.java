@@ -94,7 +94,7 @@ public class WishList extends HttpServlet {
             // Handling the case where there are no rooms
             request.setAttribute("wishlist", null);
         }
-
+        wishlistDao.deteleWishlistById(customerId, roomId);
         // Forwarding request to the JSP page
         request.getRequestDispatcher("WishList_v.jsp").forward(request, response);
         }
